@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dr0lb0uqn7yu5" path="res://placeholder/in_da_club.jpg" id="1_a4qn2"]
 [ext_resource type="Texture2D" uid="uid://bkwoc5j46kj1x" path="res://placeholder/mantis.webp" id="1_im3em"]
 [ext_resource type="Texture2D" uid="uid://peiooguirdrx" path="res://placeholder/bumble.png" id="1_mwso5"]
+[ext_resource type="Texture2D" uid="uid://bcpd64pi10631" path="res://placeholder/back_icon.png" id="4_vsfec"]
 
 [node name="FightWorld" type="Node2D" unique_id=1598865627]
 
@@ -114,3 +115,65 @@ text = "Observe
 layout_mode = 2
 text = "Item
 "
+
+[node name="TurnCounter" type="Label" parent="UI/UI" unique_id=198644536]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Turn 1"
+
+[node name="WhoseTurn" type="Label" parent="UI/UI/TurnCounter" unique_id=1611152865]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 21.0
+offset_right = 80.0
+offset_bottom = 44.0
+text = "Your Turn"
+
+[node name="ButtonBox" type="Panel" parent="UI/UI" unique_id=305789649]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -413.0
+offset_right = 367.0
+offset_bottom = 187.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/UI/ButtonBox" unique_id=1894500618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 46.0
+offset_right = 2.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/UI/ButtonBox/ScrollContainer" unique_id=1503139930]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Back" type="TextureButton" parent="UI/UI/ButtonBox" unique_id=1660743463]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 1.0
+offset_right = 603.0
+offset_bottom = 51.0
+texture_normal = ExtResource("4_vsfec")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="UI/UI/ButtonBox" unique_id=1129530726]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Button Box"
