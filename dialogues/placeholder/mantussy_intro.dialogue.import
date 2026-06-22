@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bgbio831eumtr"
+path="res://.godot/imported/mantussy_intro.dialogue-6e22eb27eea1317e066536c3e2d0e5c4.tres"
+
+[deps]
+
+source_file="res://dialogues/placeholder/mantussy_intro.dialogue"
+dest_files=["res://.godot/imported/mantussy_intro.dialogue-6e22eb27eea1317e066536c3e2d0e5c4.tres"]
+
+[params]
+
+defaults=true

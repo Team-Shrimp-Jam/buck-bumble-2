@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cxum1fnyxc6rc"]
+
+[ext_resource type="Texture2D" uid="uid://bm8hpg8brofm6" path="res://placeholder/duo.jpg" id="1_j5ro7"]
+[ext_resource type="Texture2D" uid="uid://bkwoc5j46kj1x" path="res://placeholder/mantis.webp" id="2_avvml"]
+[ext_resource type="Shader" uid="uid://d03c5vfwpy5un" path="res://shaders/outline.gdshader" id="2_krb83"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j5ro7"]
+shader = ExtResource("2_krb83")
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 13.0
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+
+[node name="DialogueWorld" type="Control" unique_id=731140727]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=1529835491]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -383.0
+offset_right = 406.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j5ro7")
+expand_mode = 2
+
+[node name="Character" type="TextureRect" parent="." unique_id=513060488]
+material = SubResource("ShaderMaterial_j5ro7")
+layout_mode = 0
+offset_left = 404.0
+offset_top = 62.0
+offset_right = 878.0
+offset_bottom = 536.0
+texture = ExtResource("2_avvml")
+expand_mode = 2
