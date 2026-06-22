@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cn1v4nd5qvhlr"]
+
+[ext_resource type="Script" uid="uid://cayxt1e1fo2u6" path="res://ui/respect_meter/respect_meter.gd" id="1_aawaa"]
+
+[node name="RespectMeter" type="ProgressBar" unique_id=1399752171]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -505.0
+offset_right = -32.0
+offset_bottom = 495.0
+grow_horizontal = 0
+grow_vertical = 2
+value = 30.0
+fill_mode = 3
+show_percentage = false
+script = ExtResource("1_aawaa")
+
+[node name="Label" type="Label" parent="." unique_id=2112395842]
+layout_mode = 0
+offset_left = -81.0
+offset_top = 465.0
+offset_right = -20.0
+offset_bottom = 488.0
+text = "Respect"

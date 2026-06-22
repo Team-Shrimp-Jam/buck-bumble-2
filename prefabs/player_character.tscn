@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bmucgt1akp3cu"]
+
+[ext_resource type="Texture2D" uid="uid://peiooguirdrx" path="res://placeholder/bumble.png" id="1_bg8ar"]
+
+[node name="PlayerCharacter" type="Node2D" unique_id=533740111]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2040045505]
+scale = Vector2(0.047817715, 0.04781771)
+texture = ExtResource("1_bg8ar")

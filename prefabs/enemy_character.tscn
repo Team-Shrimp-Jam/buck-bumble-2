@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bepw2yce4mcf6"]
+
+[ext_resource type="Texture2D" uid="uid://bkwoc5j46kj1x" path="res://placeholder/mantis.webp" id="1_8nipi"]
+
+[node name="EnemyCharacter" type="Node2D" unique_id=191214691]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1638289412]
+scale = Vector2(0.20605469, 0.20605469)
+texture = ExtResource("1_8nipi")

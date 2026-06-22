@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dma08hf2hnpsy"]
+
+[node name="TurnCounter" type="Label" unique_id=1833968485]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Turn 1"
+
+[node name="WhoseTurn" type="Label" parent="." unique_id=574884501]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 21.0
+offset_right = 80.0
+offset_bottom = 44.0
+text = "Your Turn"

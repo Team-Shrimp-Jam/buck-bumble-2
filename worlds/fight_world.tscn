@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://cysvanenq4kmw"]
 
 [ext_resource type="Texture2D" uid="uid://dr0lb0uqn7yu5" path="res://placeholder/in_da_club.jpg" id="1_a4qn2"]
-[ext_resource type="Texture2D" uid="uid://bkwoc5j46kj1x" path="res://placeholder/mantis.webp" id="1_im3em"]
-[ext_resource type="Texture2D" uid="uid://peiooguirdrx" path="res://placeholder/bumble.png" id="1_mwso5"]
-[ext_resource type="Texture2D" uid="uid://bcpd64pi10631" path="res://placeholder/back_icon.png" id="4_vsfec"]
+[ext_resource type="PackedScene" uid="uid://bmucgt1akp3cu" path="res://prefabs/player_character.tscn" id="2_yjrb7"]
+[ext_resource type="PackedScene" uid="uid://bepw2yce4mcf6" path="res://prefabs/enemy_character.tscn" id="3_p283c"]
+[ext_resource type="PackedScene" uid="uid://cn1v4nd5qvhlr" path="res://ui/respect_meter/respect_meter.tscn" id="4_yjrb7"]
+[ext_resource type="PackedScene" uid="uid://dkfrcku2n56g2" path="res://ui/status/status.tscn" id="5_p283c"]
+[ext_resource type="PackedScene" uid="uid://uobwf81c518f" path="res://ui/main_buttons/main_buttons.tscn" id="6_5gof1"]
+[ext_resource type="PackedScene" uid="uid://dma08hf2hnpsy" path="res://ui/turn_counter.tscn" id="7_3axwi"]
+[ext_resource type="PackedScene" uid="uid://bw6a1oxah5uh2" path="res://ui/button_box.tscn" id="8_p1cwi"]
 
 [node name="FightWorld" type="Node2D" unique_id=1598865627]
 
@@ -13,19 +17,11 @@ zoom = Vector2(1.7, 1.7)
 [node name="Background" type="Sprite2D" parent="." unique_id=467885592]
 texture = ExtResource("1_a4qn2")
 
-[node name="PlayerCharacter" type="Node2D" parent="." unique_id=863905944]
+[node name="PlayerCharacter" parent="." unique_id=533740111 instance=ExtResource("2_yjrb7")]
 position = Vector2(-273, 82)
 
-[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter" unique_id=205869290]
-scale = Vector2(0.047817715, 0.04781771)
-texture = ExtResource("1_mwso5")
-
-[node name="EnemyCharacter" type="Node2D" parent="." unique_id=1045557456]
+[node name="EnemyCharacter" parent="." unique_id=191214691 instance=ExtResource("3_p283c")]
 position = Vector2(300, 76)
-
-[node name="Sprite2D" type="Sprite2D" parent="EnemyCharacter" unique_id=546439416]
-scale = Vector2(0.20605469, 0.20605469)
-texture = ExtResource("1_im3em")
 
 [node name="FightManager" type="Node" parent="." unique_id=1347210152]
 
@@ -39,141 +35,53 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RespectMeter" type="ProgressBar" parent="UI/UI" unique_id=2138515487]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -62.0
-offset_top = -505.0
-offset_right = -32.0
-offset_bottom = 495.0
-grow_horizontal = 0
-grow_vertical = 2
-value = 30.0
-fill_mode = 3
-show_percentage = false
-
-[node name="Label" type="Label" parent="UI/UI/RespectMeter" unique_id=1484832806]
+[node name="RespectMeter" parent="UI/UI" unique_id=1399752171 instance=ExtResource("4_yjrb7")]
 layout_mode = 0
-offset_left = -81.0
-offset_top = 465.0
-offset_right = -20.0
-offset_bottom = 488.0
-text = "Respect"
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 30.0
+offset_bottom = 1000.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="Status" type="Panel" parent="UI/UI" unique_id=183489857]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 561.0
-offset_top = -340.0
-offset_right = -359.0
-offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 0
-offset_transform_position = Vector2(0, -50)
-
-[node name="Text" type="RichTextLabel" parent="UI/UI/Status" unique_id=1363809425]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 35.0
-offset_bottom = -15.0
-grow_horizontal = 2
-grow_vertical = 2
-scroll_following = true
-
-[node name="Label" type="Label" parent="UI/UI/Status" unique_id=1483634310]
+[node name="Status" parent="UI/UI" unique_id=1622793977 instance=ExtResource("5_p283c")]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Messages"
+anchors_preset = 0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 300.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="MainButtons" type="HBoxContainer" parent="UI/UI" unique_id=1877894107]
+[node name="MainButtons" parent="UI/UI" unique_id=1936851800 instance=ExtResource("6_5gof1")]
 layout_mode = 0
-offset_left = 923.0
-offset_top = 610.0
-offset_right = 1105.0
-offset_bottom = 650.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 182.0
+offset_bottom = 40.0
 
-[node name="Dance" type="Button" parent="UI/UI/MainButtons" unique_id=1502733897]
-layout_mode = 2
-text = "Dance"
-
-[node name="Observe" type="Button" parent="UI/UI/MainButtons" unique_id=1675678705]
-layout_mode = 2
-text = "Observe
-"
-
-[node name="Item" type="Button" parent="UI/UI/MainButtons" unique_id=1915578658]
-layout_mode = 2
-text = "Item
-"
-
-[node name="TurnCounter" type="Label" parent="UI/UI" unique_id=198644536]
+[node name="TurnCounter" parent="UI/UI" unique_id=1833968485 instance=ExtResource("7_3axwi")]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Turn 1"
 
-[node name="WhoseTurn" type="Label" parent="UI/UI/TurnCounter" unique_id=1611152865]
+[node name="ButtonBox" parent="UI/UI" unique_id=1255810237 instance=ExtResource("8_p1cwi")]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 21.0
-offset_right = 80.0
-offset_bottom = 44.0
-text = "Your Turn"
-
-[node name="ButtonBox" type="Panel" parent="UI/UI" unique_id=305789649]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -233.0
-offset_top = -413.0
-offset_right = 367.0
-offset_bottom = 187.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="UI/UI/ButtonBox" unique_id=1894500618]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 46.0
-offset_right = 2.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-horizontal_scroll_mode = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/UI/ButtonBox/ScrollContainer" unique_id=1503139930]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Back" type="TextureButton" parent="UI/UI/ButtonBox" unique_id=1660743463]
-layout_mode = 0
-offset_left = 553.0
-offset_top = 1.0
-offset_right = 603.0
-offset_bottom = 51.0
-texture_normal = ExtResource("4_vsfec")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="UI/UI/ButtonBox" unique_id=1129530726]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Button Box"
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 600.0
+offset_bottom = 600.0
+grow_horizontal = 1
+grow_vertical = 1

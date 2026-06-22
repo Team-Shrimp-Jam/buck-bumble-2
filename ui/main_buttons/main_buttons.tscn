@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://uobwf81c518f"]
+
+[ext_resource type="Script" uid="uid://bg6y2t5mskswa" path="res://ui/main_buttons/main_buttons.gd" id="1_5aqe8"]
+
+[node name="MainButtons" type="HBoxContainer" unique_id=1936851800]
+offset_left = 923.0
+offset_top = 610.0
+offset_right = 1105.0
+offset_bottom = 650.0
+script = ExtResource("1_5aqe8")
+
+[node name="Dance" type="Button" parent="." unique_id=738707760]
+layout_mode = 2
+text = "Dance"
+
+[node name="Observe" type="Button" parent="." unique_id=742155976]
+layout_mode = 2
+text = "Observe
+"
+
+[node name="Item" type="Button" parent="." unique_id=1858031265]
+layout_mode = 2
+text = "Item
+"
+
+[connection signal="pressed" from="Dance" to="." method="_on_dance_pressed"]
+[connection signal="pressed" from="Observe" to="." method="_on_observe_pressed"]
+[connection signal="pressed" from="Item" to="." method="_on_item_pressed"]
