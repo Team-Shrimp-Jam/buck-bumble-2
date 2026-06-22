@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+Globals="*uid://d2pyhy6k5a4pf"
 
 [dialogue_manager]
 

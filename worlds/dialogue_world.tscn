@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cxum1fnyxc6rc"]
 
 [ext_resource type="Texture2D" uid="uid://bm8hpg8brofm6" path="res://placeholder/duo.jpg" id="1_j5ro7"]
+[ext_resource type="Script" uid="uid://tfovhbsexx0j" path="res://worlds/dialogue_world.gd" id="1_krb83"]
 [ext_resource type="Texture2D" uid="uid://bkwoc5j46kj1x" path="res://placeholder/mantis.webp" id="2_avvml"]
 [ext_resource type="Shader" uid="uid://d03c5vfwpy5un" path="res://shaders/outline.gdshader" id="2_krb83"]
 
@@ -17,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_krb83")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1529835491]
 layout_mode = 1

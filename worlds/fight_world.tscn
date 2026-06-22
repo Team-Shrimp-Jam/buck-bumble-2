@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cysvanenq4kmw"]
+
+[ext_resource type="Texture2D" uid="uid://dr0lb0uqn7yu5" path="res://placeholder/in_da_club.jpg" id="1_a4qn2"]
+[ext_resource type="Texture2D" uid="uid://bkwoc5j46kj1x" path="res://placeholder/mantis.webp" id="1_im3em"]
+[ext_resource type="Texture2D" uid="uid://peiooguirdrx" path="res://placeholder/bumble.png" id="1_mwso5"]
+
+[node name="FightWorld" type="Node2D" unique_id=1598865627]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=652675744]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=467885592]
+texture = ExtResource("1_a4qn2")
+
+[node name="PlayerCharacter" type="Node2D" parent="." unique_id=863905944]
+position = Vector2(-273, 82)
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerCharacter" unique_id=205869290]
+scale = Vector2(0.047817715, 0.04781771)
+texture = ExtResource("1_mwso5")
+
+[node name="EnemyCharacter" type="Node2D" parent="." unique_id=1045557456]
+position = Vector2(300, 76)
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyCharacter" unique_id=546439416]
+scale = Vector2(0.20605469, 0.20605469)
+texture = ExtResource("1_im3em")
