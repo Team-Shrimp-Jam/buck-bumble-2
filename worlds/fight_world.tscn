@@ -25,3 +25,92 @@ position = Vector2(300, 76)
 [node name="Sprite2D" type="Sprite2D" parent="EnemyCharacter" unique_id=546439416]
 scale = Vector2(0.20605469, 0.20605469)
 texture = ExtResource("1_im3em")
+
+[node name="FightManager" type="Node" parent="." unique_id=1347210152]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1943987918]
+
+[node name="UI" type="Control" parent="UI" unique_id=1646478714]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RespectMeter" type="ProgressBar" parent="UI/UI" unique_id=2138515487]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -505.0
+offset_right = -32.0
+offset_bottom = 495.0
+grow_horizontal = 0
+grow_vertical = 2
+value = 30.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Label" type="Label" parent="UI/UI/RespectMeter" unique_id=1484832806]
+layout_mode = 0
+offset_left = -81.0
+offset_top = 465.0
+offset_right = -20.0
+offset_bottom = 488.0
+text = "Respect"
+
+[node name="Status" type="Panel" parent="UI/UI" unique_id=183489857]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 561.0
+offset_top = -340.0
+offset_right = -359.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_position = Vector2(0, -50)
+
+[node name="Text" type="RichTextLabel" parent="UI/UI/Status" unique_id=1363809425]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 35.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_following = true
+
+[node name="Label" type="Label" parent="UI/UI/Status" unique_id=1483634310]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Messages"
+
+[node name="MainButtons" type="HBoxContainer" parent="UI/UI" unique_id=1877894107]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 610.0
+offset_right = 1105.0
+offset_bottom = 650.0
+
+[node name="Dance" type="Button" parent="UI/UI/MainButtons" unique_id=1502733897]
+layout_mode = 2
+text = "Dance"
+
+[node name="Observe" type="Button" parent="UI/UI/MainButtons" unique_id=1675678705]
+layout_mode = 2
+text = "Observe
+"
+
+[node name="Item" type="Button" parent="UI/UI/MainButtons" unique_id=1915578658]
+layout_mode = 2
+text = "Item
+"
