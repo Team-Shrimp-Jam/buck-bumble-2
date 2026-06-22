@@ -7,6 +7,7 @@
 [node name="FightWorld" type="Node2D" unique_id=1598865627]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=652675744]
+zoom = Vector2(1.7, 1.7)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=467885592]
 texture = ExtResource("1_a4qn2")

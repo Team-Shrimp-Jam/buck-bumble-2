@@ -22,5 +22,5 @@ func setup_character(character: Character):
 	
 	
 	
-func go_to_fight():
+func go_to_fight(dialogue_resource: DialogueResource):
 	get_tree().change_scene_to_file("res://worlds/fight_world.tscn")
