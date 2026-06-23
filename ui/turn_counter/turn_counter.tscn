@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://dma08hf2hnpsy"]
 
 [ext_resource type="Script" uid="uid://mb7l2qvekxov" path="res://ui/turn_counter/turn_counter.gd" id="1_3n8h7"]
+[ext_resource type="Theme" uid="uid://prl64lqdncdr" path="res://ui/base_ui_theme.tres" id="1_wxn11"]
 
 [node name="TurnCounter" type="Label" unique_id=1833968485]
 offset_right = 40.0
 offset_bottom = 23.0
+theme = ExtResource("1_wxn11")
 text = "Turn 1"
 script = ExtResource("1_3n8h7")
 
 [node name="WhoseTurn" type="Label" parent="." unique_id=574884501]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 21.0
-offset_right = 80.0
-offset_bottom = 44.0
+offset_top = 46.0
+offset_right = 242.0
+offset_bottom = 115.0
 text = "Your Turn"

@@ -14,6 +14,7 @@ func _ready() -> void:
 	
 func perform_move(move: Move):
 	move_performed.emit(move)
+	status.perform_dance_move(move)
 
 func set_turn(turn_count: int):
 	turn_counter.update_counter(turn_count)
