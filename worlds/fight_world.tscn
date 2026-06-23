@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://cysvanenq4kmw"]
 
+[ext_resource type="Script" uid="uid://bkcs1bl408yav" path="res://worlds/fight_world.gd" id="1_5gof1"]
 [ext_resource type="Texture2D" uid="uid://dr0lb0uqn7yu5" path="res://placeholder/in_da_club.jpg" id="1_a4qn2"]
 [ext_resource type="PackedScene" uid="uid://bmucgt1akp3cu" path="res://prefabs/player_character.tscn" id="2_yjrb7"]
 [ext_resource type="PackedScene" uid="uid://bepw2yce4mcf6" path="res://prefabs/enemy_character.tscn" id="3_p283c"]
+[ext_resource type="Script" uid="uid://cd1nei0mjpcg6" path="res://ui/ui.gd" id="4_p283c"]
 [ext_resource type="PackedScene" uid="uid://cn1v4nd5qvhlr" path="res://ui/respect_meter/respect_meter.tscn" id="4_yjrb7"]
+[ext_resource type="PackedScene" uid="uid://cqy6h4i43r3vu" path="res://prefabs/fight_manager.tscn" id="5_3axwi"]
 [ext_resource type="PackedScene" uid="uid://dkfrcku2n56g2" path="res://ui/status/status.tscn" id="5_p283c"]
 [ext_resource type="PackedScene" uid="uid://uobwf81c518f" path="res://ui/main_buttons/main_buttons.tscn" id="6_5gof1"]
 [ext_resource type="PackedScene" uid="uid://dma08hf2hnpsy" path="res://ui/turn_counter/turn_counter.tscn" id="7_3axwi"]
 [ext_resource type="PackedScene" uid="uid://bw6a1oxah5uh2" path="res://ui/button_box/button_box.tscn" id="8_p1cwi"]
 
 [node name="FightWorld" type="Node2D" unique_id=1598865627]
+script = ExtResource("1_5gof1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=652675744]
 zoom = Vector2(1.7, 1.7)
@@ -23,9 +27,10 @@ position = Vector2(-273, 82)
 [node name="EnemyCharacter" parent="." unique_id=191214691 instance=ExtResource("3_p283c")]
 position = Vector2(300, 76)
 
-[node name="FightManager" type="Node" parent="." unique_id=1347210152]
+[node name="FightManager" parent="." unique_id=1914864204 instance=ExtResource("5_3axwi")]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1943987918]
+script = ExtResource("4_p283c")
 
 [node name="UI" type="Control" parent="UI" unique_id=1646478714]
 layout_mode = 3
@@ -85,3 +90,7 @@ offset_right = 1427.0
 offset_bottom = 681.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[connection signal="dance_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_dance_clicked"]
+[connection signal="item_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_item_clicked"]
+[connection signal="observe_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_observe_clicked"]

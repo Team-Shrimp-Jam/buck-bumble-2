@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cqy6h4i43r3vu"]
+
+[ext_resource type="Script" uid="uid://dcyjfyrfdnc2v" path="res://prefabs/fight_manager.gd" id="1_biwx1"]
+
+[node name="FightManager" type="Node" unique_id=1914864204]
+script = ExtResource("1_biwx1")

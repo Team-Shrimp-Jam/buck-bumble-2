@@ -2,7 +2,7 @@ extends Panel
 
 @onready var buttons = $ScrollContainer/Buttons
 signal menu_closed
-
+signal move_performed(Move)
 
 func _ready() -> void:
 	set_visibility(false)
@@ -13,6 +13,11 @@ func set_visibility(is_visible: bool):
 	else:
 		mouse_filter = Control.MOUSE_FILTER_IGNORE
 	visible = is_visible
+
+func populate_dance_moves():
+	var generic_array: Array[Move] = []
+	generic_array.append_array(PlayerMoves.get_dance_moves())
+	populate_buttons(generic_array)
 	
 func populate_buttons(moves: Array[Move]):
 	for move in moves:
@@ -24,8 +29,11 @@ func make_button(move: Move) -> Button:
 	button.name = move.name
 	button.text = move.name
 	#TODO put code to connect this to actual logic
+	var button_action = func send_button_action():
+		move_performed.emit(move)
 	buttons.add_child(button)
 	button.pressed.connect(_on_back_pressed)
+	button.pressed.connect(button_action)
 	return button
 
 func _on_back_pressed() -> void:

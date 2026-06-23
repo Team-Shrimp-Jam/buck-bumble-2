@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b4dv3k1id0124" path="res://worlds/title.gd" id="1_jyiac"]
 [ext_resource type="Texture2D" uid="uid://b3d3hh0g22gy6" path="res://placeholder/Buck_Bumble_Logo.png" id="1_l580b"]
+[ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/dance_move.gd" id="2_v7a2h"]
+[ext_resource type="Resource" uid="uid://bb7bmb35st3rm" path="res://objects/dance_moves/slide_to_the_left.tres" id="3_n1akl"]
+[ext_resource type="Resource" uid="uid://b6d12rsr4vgxv" path="res://objects/dance_moves/right_foot_2_stomp.tres" id="4_4futp"]
 
 [node name="Title" type="Control" unique_id=1544525759]
 layout_mode = 3
@@ -11,6 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jyiac")
+starting_player_moves = Array[ExtResource("2_v7a2h")]([ExtResource("3_n1akl"), ExtResource("4_4futp")])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1845254910]
 layout_mode = 1
