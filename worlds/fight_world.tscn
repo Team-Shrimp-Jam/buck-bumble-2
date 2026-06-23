@@ -93,6 +93,7 @@ offset_bottom = 681.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[connection signal="opponents_turn" from="FightManager" to="FightManager" method="_on_opponents_turn"]
 [connection signal="dance_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_dance_clicked"]
 [connection signal="item_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_item_clicked"]
 [connection signal="observe_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_observe_clicked"]
