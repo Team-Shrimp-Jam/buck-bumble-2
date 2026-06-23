@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DanceMove" format=3 uid="uid://coslccnq8caam"]
+
+[ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/dance_move.gd" id="1_yk5b2"]
+
+[resource]
+script = ExtResource("1_yk5b2")
+name = "Left Foot Two Stomps"
+metadata/_custom_type_script = "uid://damtdjucyii0p"
