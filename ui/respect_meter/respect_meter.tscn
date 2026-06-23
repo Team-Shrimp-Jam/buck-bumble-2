@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cn1v4nd5qvhlr"]
 
 [ext_resource type="Script" uid="uid://cayxt1e1fo2u6" path="res://ui/respect_meter/respect_meter.gd" id="1_aawaa"]
+[ext_resource type="Theme" uid="uid://prl64lqdncdr" path="res://ui/base_ui_theme.tres" id="1_dqyji"]
 
 [node name="RespectMeter" type="ProgressBar" unique_id=1399752171]
 anchors_preset = 6
@@ -14,6 +15,7 @@ offset_right = -32.0
 offset_bottom = 495.0
 grow_horizontal = 0
 grow_vertical = 2
+theme = ExtResource("1_dqyji")
 value = 30.0
 fill_mode = 3
 show_percentage = false
@@ -21,8 +23,8 @@ script = ExtResource("1_aawaa")
 
 [node name="Label" type="Label" parent="." unique_id=2112395842]
 layout_mode = 0
-offset_left = -81.0
-offset_top = 465.0
-offset_right = -20.0
-offset_bottom = 488.0
+offset_left = -205.0
+offset_top = 444.0
+offset_right = -15.0
+offset_bottom = 513.0
 text = "Respect"

@@ -96,3 +96,4 @@ grow_vertical = 1
 [connection signal="dance_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_dance_clicked"]
 [connection signal="item_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_item_clicked"]
 [connection signal="observe_clicked" from="UI/UI/MainButtons" to="UI" method="_on_main_buttons_observe_clicked"]
+[connection signal="menu_closed" from="UI/UI/ButtonBox" to="UI" method="_on_button_box_menu_closed"]

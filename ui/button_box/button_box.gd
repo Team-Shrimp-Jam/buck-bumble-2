@@ -1,6 +1,7 @@
 extends Panel
 
 @onready var buttons = $ScrollContainer/Buttons
+@onready var label = $Label
 signal menu_closed
 signal move_performed(Move)
 
@@ -12,11 +13,14 @@ func set_visibility(is_visible: bool):
 		mouse_filter = Control.MOUSE_FILTER_STOP
 	else:
 		mouse_filter = Control.MOUSE_FILTER_IGNORE
+		for child in buttons.get_children():
+			child.queue_free()
 	visible = is_visible
 
 func populate_dance_moves():
 	var generic_array: Array[Move] = []
 	generic_array.append_array(PlayerMoves.get_dance_moves())
+	label.text = "Dance Moves"
 	populate_buttons(generic_array)
 	
 func populate_buttons(moves: Array[Move]):

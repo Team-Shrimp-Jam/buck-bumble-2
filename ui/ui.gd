@@ -55,3 +55,7 @@ func _on_main_buttons_item_clicked() -> void:
 
 func _on_main_buttons_observe_clicked() -> void:
 	observe_performed.emit()
+
+
+func _on_button_box_menu_closed() -> void:
+	show_main_buttons()
