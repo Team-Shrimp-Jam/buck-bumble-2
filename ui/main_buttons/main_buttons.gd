@@ -8,8 +8,12 @@ signal item_clicked
 func appear():
 	set_visibility(true)
 
-func set_visibility(new_visibility: bool):
-	visible = new_visibility
+func set_visibility(is_visible: bool):
+	if is_visible:
+		mouse_filter = Control.MOUSE_FILTER_STOP
+	else:
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+	visible = is_visible
 	
 
 

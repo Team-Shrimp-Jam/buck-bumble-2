@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ck5c1nn7a15pk"]
+
+[ext_resource type="Script" uid="uid://b4dv3k1id0124" path="res://worlds/title.gd" id="1_jyiac"]
+[ext_resource type="Texture2D" uid="uid://b3d3hh0g22gy6" path="res://placeholder/Buck_Bumble_Logo.png" id="1_l580b"]
+
+[node name="Title" type="Control" unique_id=1544525759]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jyiac")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1845254910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.73743916, 0.025989402, 0.4740579, 1)
+
+[node name="Logo" type="TextureRect" parent="." unique_id=146531806]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 79.0
+offset_right = 1272.0
+offset_bottom = 779.0
+texture = ExtResource("1_l580b")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=673937054]
+layout_mode = 0
+offset_left = 1301.0
+offset_top = 189.0
+offset_right = 1530.0
+offset_bottom = 735.0
+theme_override_font_sizes/font_size = 400
+text = "2"
+
+[node name="Play" type="Button" parent="." unique_id=532477116]
+layout_mode = 0
+offset_left = 894.0
+offset_top = 854.0
+offset_right = 1103.0
+offset_bottom = 999.0
+theme_override_font_sizes/font_size = 100
+text = "Play"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DanceMove" format=3 uid="uid://cu5vq4nafdduy"]
+
+[ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/dance_move.gd" id="1_bpb7o"]
+
+[resource]
+script = ExtResource("1_bpb7o")
+name = "Backflip"
+metadata/_custom_type_script = "uid://damtdjucyii0p"

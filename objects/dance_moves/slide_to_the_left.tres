@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DanceMove" format=3 uid="uid://bb7bmb35st3rm"]
+
+[ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/dance_move.gd" id="1_rd227"]
+
+[resource]
+script = ExtResource("1_rd227")
+name = "Sliiiide to the left"
+metadata/_custom_type_script = "uid://damtdjucyii0p"
