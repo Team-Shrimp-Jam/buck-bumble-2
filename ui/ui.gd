@@ -15,6 +15,7 @@ func _ready() -> void:
 func perform_move(move: Move):
 	move_performed.emit(move)
 	status.perform_dance_move(move)
+	hide_main_buttons()
 
 func set_turn(turn_count: int):
 	turn_counter.update_counter(turn_count)
@@ -23,8 +24,7 @@ func swap_sides(is_your_turn: bool):
 	turn_counter.set_whose_turn(is_your_turn)
 	if is_your_turn:
 		show_main_buttons()
-	else:
-		hide_main_buttons()
+		
 	
 func update_respect(respect: float):
 	respect_meter.update(respect)

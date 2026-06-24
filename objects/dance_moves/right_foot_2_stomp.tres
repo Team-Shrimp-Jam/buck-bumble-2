@@ -1,8 +1,22 @@
 [gd_resource type="Resource" script_class="DanceMove" format=3 uid="uid://b6d12rsr4vgxv"]
 
+[ext_resource type="Script" uid="uid://3mkkbnx4wfqx" path="res://objects/scripts/action.gd" id="1_kuh3l"]
 [ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/moves/dance_move.gd" id="1_ky5g3"]
+[ext_resource type="Script" uid="uid://kf6ma0ugk01r" path="res://objects/scripts/actions/change_fatigue.gd" id="2_kilhc"]
+[ext_resource type="Script" uid="uid://cq754sa4ekb0k" path="res://objects/scripts/actions/change_respect.gd" id="3_3me3h"]
+
+[sub_resource type="Resource" id="Resource_1f4n1"]
+script = ExtResource("2_kilhc")
+fatigue_decrease = 10.0
+metadata/_custom_type_script = "uid://kf6ma0ugk01r"
+
+[sub_resource type="Resource" id="Resource_2rmtk"]
+script = ExtResource("3_3me3h")
+respect_increase = 40.0
+metadata/_custom_type_script = "uid://cq754sa4ekb0k"
 
 [resource]
 script = ExtResource("1_ky5g3")
 name = "Right Foot 2 Stomps"
+actions = Array[ExtResource("1_kuh3l")]([SubResource("Resource_1f4n1"), SubResource("Resource_2rmtk")])
 metadata/_custom_type_script = "uid://damtdjucyii0p"

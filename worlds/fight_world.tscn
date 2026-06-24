@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cqy6h4i43r3vu" path="res://prefabs/fight_manager.tscn" id="5_3axwi"]
 [ext_resource type="PackedScene" uid="uid://dkfrcku2n56g2" path="res://ui/status/status.tscn" id="5_p283c"]
 [ext_resource type="PackedScene" uid="uid://uobwf81c518f" path="res://ui/main_buttons/main_buttons.tscn" id="6_5gof1"]
+[ext_resource type="Resource" uid="uid://cuox568pq38rq" path="res://objects/characters/player/player.tres" id="6_obnau"]
 [ext_resource type="PackedScene" uid="uid://dma08hf2hnpsy" path="res://ui/turn_counter/turn_counter.tscn" id="7_3axwi"]
 [ext_resource type="Theme" uid="uid://prl64lqdncdr" path="res://ui/base_ui_theme.tres" id="7_p1cwi"]
 [ext_resource type="PackedScene" uid="uid://bw6a1oxah5uh2" path="res://ui/button_box/button_box.tscn" id="8_p1cwi"]
@@ -29,6 +30,7 @@ position = Vector2(-273, 82)
 position = Vector2(300, 76)
 
 [node name="FightManager" parent="." unique_id=1914864204 instance=ExtResource("5_3axwi")]
+player_character = ExtResource("6_obnau")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1943987918]
 script = ExtResource("4_p283c")
