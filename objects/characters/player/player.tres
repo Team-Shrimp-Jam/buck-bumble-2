@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Character" format=3 uid="uid://cuox568pq38rq"]
+
+[ext_resource type="Script" uid="uid://bcq7yhhqb687m" path="res://objects/scripts/character.gd" id="1_3letn"]
+[ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/moves/dance_move.gd" id="1_f2gp6"]
+[ext_resource type="Resource" uid="uid://bb7bmb35st3rm" path="res://objects/dance_moves/slide_to_the_left.tres" id="2_03ofw"]
+[ext_resource type="Texture2D" uid="uid://peiooguirdrx" path="res://placeholder/bumble.png" id="2_x4q3a"]
+[ext_resource type="Resource" uid="uid://b6d12rsr4vgxv" path="res://objects/dance_moves/right_foot_2_stomp.tres" id="3_1e4gw"]
+[ext_resource type="Script" uid="uid://vugkjccbiyyd" path="res://objects/scripts/pickers/selection_picker.gd" id="5_1e4gw"]
+
+[sub_resource type="Resource" id="Resource_biwx1"]
+script = ExtResource("5_1e4gw")
+metadata/_custom_type_script = "uid://vugkjccbiyyd"
+
+[resource]
+script = ExtResource("1_3letn")
+name = "You"
+pic = ExtResource("2_x4q3a")
+dance_moves = Array[ExtResource("1_f2gp6")]([ExtResource("2_03ofw"), ExtResource("3_1e4gw")])
+picker = SubResource("Resource_biwx1")
+max_fatigue = 100.0
+metadata/_custom_type_script = "uid://bcq7yhhqb687m"

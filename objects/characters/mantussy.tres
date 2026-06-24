@@ -1,11 +1,16 @@
 [gd_resource type="Resource" script_class="Character" format=3 uid="uid://bopmsl5jvv4q2"]
 
 [ext_resource type="Resource" uid="uid://bgbio831eumtr" path="res://dialogues/placeholder/mantussy_intro.dialogue" id="1_6jlkn"]
-[ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/dance_move.gd" id="1_efykv"]
+[ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/moves/dance_move.gd" id="1_efykv"]
 [ext_resource type="Script" uid="uid://bcq7yhhqb687m" path="res://objects/scripts/character.gd" id="1_p06lb"]
 [ext_resource type="Resource" uid="uid://i2din8ve8sw2" path="res://objects/dance_moves/take_it_back_now_yall.tres" id="2_85rg3"]
 [ext_resource type="Texture2D" uid="uid://bkwoc5j46kj1x" path="res://placeholder/mantis.webp" id="2_yj128"]
 [ext_resource type="Resource" uid="uid://coslccnq8caam" path="res://objects/dance_moves/left_foot_2_stomp.tres" id="3_pkri3"]
+[ext_resource type="Script" uid="uid://dkc7ub0v31k0d" path="res://objects/scripts/pickers/random_picker.gd" id="6_85rg3"]
+
+[sub_resource type="Resource" id="Resource_85rg3"]
+script = ExtResource("6_85rg3")
+metadata/_custom_type_script = "uid://dkc7ub0v31k0d"
 
 [resource]
 script = ExtResource("1_p06lb")
@@ -13,4 +18,6 @@ name = "Mantussy"
 pic = ExtResource("2_yj128")
 lines = ExtResource("1_6jlkn")
 dance_moves = Array[ExtResource("1_efykv")]([ExtResource("2_85rg3"), ExtResource("3_pkri3")])
+picker = SubResource("Resource_85rg3")
+max_fatigue = 40.0
 metadata/_custom_type_script = "uid://bcq7yhhqb687m"

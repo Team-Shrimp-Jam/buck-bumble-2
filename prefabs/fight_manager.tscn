@@ -4,3 +4,11 @@
 
 [node name="FightManager" type="Node" unique_id=1914864204]
 script = ExtResource("1_biwx1")
+
+[node name="Timers" type="Node" parent="." unique_id=1972880490]
+
+[node name="TurnChangeTimer" type="Timer" parent="Timers" unique_id=97250092]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timers/TurnChangeTimer" to="." method="_on_turn_change_timer_timeout"]
