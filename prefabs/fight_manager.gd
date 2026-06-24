@@ -8,6 +8,7 @@ var your_turn : bool = true
 @export var player_character: Character
 var enemy_character: Character
 var active_character: Character
+var inactive_character: Character
 var respect: float
 signal turn_count_changed(turn_count: int)
 signal whose_turn_changed(is_your_turn: bool)
@@ -19,6 +20,7 @@ func _ready() -> void:
 	respect = starting_respect
 	enemy_character = Globals.current_character
 	active_character = player_character
+	inactive_character = enemy_character
 	turn_count_changed.emit(turn_number)
 	whose_turn_changed.emit(your_turn)
 	internal_state = GameState.new(turn_number, respect)
@@ -27,10 +29,12 @@ func increment_turn():
 	if your_turn:
 		your_turn = false
 		active_character = enemy_character
+		inactive_character = player_character
 	else:
 		turn_number += 1
 		your_turn = true
 		active_character = player_character
+		inactive_character = enemy_character
 	internal_state.update_turn_count(turn_number)
 	whose_turn_changed.emit(your_turn)
 	turn_count_changed.emit(turn_number)

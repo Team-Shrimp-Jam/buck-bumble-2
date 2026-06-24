@@ -1,8 +1,22 @@
 [gd_resource type="Resource" script_class="DanceMove" format=3 uid="uid://bb7bmb35st3rm"]
 
+[ext_resource type="Script" uid="uid://3mkkbnx4wfqx" path="res://objects/scripts/action.gd" id="1_p856o"]
 [ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/moves/dance_move.gd" id="1_rd227"]
+[ext_resource type="Script" uid="uid://kf6ma0ugk01r" path="res://objects/scripts/actions/change_fatigue.gd" id="2_x44x7"]
+[ext_resource type="Script" uid="uid://cq754sa4ekb0k" path="res://objects/scripts/actions/change_respect.gd" id="3_sanyk"]
+
+[sub_resource type="Resource" id="Resource_5g77k"]
+script = ExtResource("2_x44x7")
+fatigue_decrease = 15.0
+metadata/_custom_type_script = "uid://kf6ma0ugk01r"
+
+[sub_resource type="Resource" id="Resource_x44x7"]
+script = ExtResource("3_sanyk")
+respect_increase = 35.0
+metadata/_custom_type_script = "uid://cq754sa4ekb0k"
 
 [resource]
 script = ExtResource("1_rd227")
 name = "Sliiiide to the left"
+actions = Array[ExtResource("1_p856o")]([SubResource("Resource_5g77k"), SubResource("Resource_x44x7")])
 metadata/_custom_type_script = "uid://damtdjucyii0p"

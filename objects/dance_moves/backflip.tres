@@ -1,8 +1,22 @@
 [gd_resource type="Resource" script_class="DanceMove" format=3 uid="uid://cu5vq4nafdduy"]
 
 [ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/moves/dance_move.gd" id="1_bpb7o"]
+[ext_resource type="Script" uid="uid://3mkkbnx4wfqx" path="res://objects/scripts/action.gd" id="1_vn0gp"]
+[ext_resource type="Script" uid="uid://kf6ma0ugk01r" path="res://objects/scripts/actions/change_fatigue.gd" id="2_pdx1m"]
+[ext_resource type="Script" uid="uid://cq754sa4ekb0k" path="res://objects/scripts/actions/change_respect.gd" id="3_g2kji"]
+
+[sub_resource type="Resource" id="Resource_obnau"]
+script = ExtResource("2_pdx1m")
+fatigue_decrease = 20.0
+metadata/_custom_type_script = "uid://kf6ma0ugk01r"
+
+[sub_resource type="Resource" id="Resource_mt148"]
+script = ExtResource("3_g2kji")
+respect_increase = 50.0
+metadata/_custom_type_script = "uid://cq754sa4ekb0k"
 
 [resource]
 script = ExtResource("1_bpb7o")
 name = "Backflip"
+actions = Array[ExtResource("1_vn0gp")]([SubResource("Resource_obnau"), SubResource("Resource_mt148")])
 metadata/_custom_type_script = "uid://damtdjucyii0p"
