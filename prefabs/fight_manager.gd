@@ -1,13 +1,16 @@
 extends Node
+class_name FightManager
 
 var turn_number : int = 1 
 var your_turn : bool = true
-@export var respect: float = 40.0
+@export var starting_respect: float = 40.0
+var respect: float
 signal turn_count_changed(turn_count: int)
 signal whose_turn_changed(is_your_turn: bool)
-signal opponents_turn
 var internal_state: GameState 
+
 func _ready() -> void:
+	respect = starting_respect
 	turn_count_changed.emit(turn_number)
 	whose_turn_changed.emit(your_turn)
 	internal_state = GameState.new(turn_number, respect)
@@ -15,7 +18,6 @@ func _ready() -> void:
 func increment_turn():
 	if your_turn:
 		your_turn = false
-		opponents_turn.emit()
 	else:
 		turn_number += 1
 		your_turn = true
