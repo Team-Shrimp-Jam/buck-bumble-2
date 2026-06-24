@@ -13,7 +13,6 @@ var respect: float
 signal turn_count_changed(turn_count: int)
 signal whose_turn_changed(is_your_turn: bool)
 signal respect_changed(new_respect: float)
-var internal_state: GameState 
 
 @onready var turn_change_timer = $Timers/TurnChangeTimer
 
@@ -24,7 +23,6 @@ func _ready() -> void:
 	inactive_character = enemy_character
 	turn_count_changed.emit(turn_number)
 	whose_turn_changed.emit(your_turn)
-	internal_state = GameState.new(turn_number, respect)
 
 func increment_turn():
 	if your_turn:
@@ -36,7 +34,6 @@ func increment_turn():
 		your_turn = true
 		active_character = player_character
 		inactive_character = enemy_character
-	internal_state.update_turn_count(turn_number)
 	whose_turn_changed.emit(your_turn)
 	turn_count_changed.emit(turn_number)
 	
