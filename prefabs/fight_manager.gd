@@ -12,6 +12,7 @@ var inactive_character: Character
 var respect: float
 signal turn_count_changed(turn_count: int)
 signal whose_turn_changed(is_your_turn: bool)
+signal respect_changed(new_respect: float)
 var internal_state: GameState 
 
 @onready var turn_change_timer = $Timers/TurnChangeTimer
@@ -50,7 +51,11 @@ func pick_and_perform_move(char: Character):
 func perform_observe():
 	turn_change_timer.start()
 
-
+func handle_end():
+	if respect <= 0:
+		pass #loss
+	elif respect >= 100:
+		pass #win
 func _on_opponents_turn() -> void:
 	pass
 
