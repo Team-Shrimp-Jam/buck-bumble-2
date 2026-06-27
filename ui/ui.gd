@@ -6,16 +6,19 @@ extends CanvasLayer
 @onready var turn_counter = $UI/TurnCounter
 @onready var button_box = $UI/ButtonBox
 
-signal move_performed(move: Move)
+signal player_move_performed(move: Move)
 signal observe_performed
 
 func _ready() -> void:
-	button_box.move_performed.connect(perform_move)
+	button_box.move_performed.connect(player_perform_move)
 	
-func perform_move(move: Move):
-	move_performed.emit(move)
+func player_perform_move(move: Move):
+	player_move_performed.emit(move)
 	status.perform_dance_move(move)
 	hide_main_buttons()
+
+func enemy_perform_move(move: Move):
+	status.perform_dance_move(move, false)
 
 func set_turn(turn_count: int):
 	turn_counter.update_counter(turn_count)

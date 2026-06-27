@@ -9,6 +9,7 @@ var saved_data = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	load_player_moves()
+	Globals.fill_current_character(load("res://objects/characters/mantussy.tres"))
 
 func load_player_moves() -> void:
 	if saved_data != null:
