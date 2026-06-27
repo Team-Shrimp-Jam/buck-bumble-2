@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*uid://c3rodes2l3gxb"
 Globals="*uid://d2pyhy6k5a4pf"
 PlayerMoves="*uid://cji4pvxlg78wd"
+GameManager="*uid://baxhdw3hakge4"
 
 [dialogue_manager]
 
