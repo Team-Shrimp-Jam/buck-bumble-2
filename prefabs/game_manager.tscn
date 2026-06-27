@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://damtdjucyii0p" path="res://objects/scripts/moves/dance_move.gd" id="2_yh24s"]
 [ext_resource type="Resource" uid="uid://b6d12rsr4vgxv" path="res://objects/dance_moves/right_foot_2_stomp.tres" id="3_paxjn"]
 [ext_resource type="Resource" uid="uid://bb7bmb35st3rm" path="res://objects/dance_moves/slide_to_the_left.tres" id="4_fa6hf"]
+[ext_resource type="Resource" uid="uid://cuox568pq38rq" path="res://objects/characters/player/player.tres" id="5_paxjn"]
 
 [node name="GameManager" type="Node2D" unique_id=1699341531]
 script = ExtResource("1_bq1pa")
 player_moves = Array[ExtResource("2_yh24s")]([ExtResource("3_paxjn"), ExtResource("4_fa6hf")])
+default_player_character = ExtResource("5_paxjn")
